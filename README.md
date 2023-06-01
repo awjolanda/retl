@@ -5,5 +5,3 @@ RETL is an application wherein you can browse a catalogue of all roman emporers,
 
   * MongoDB
   * ...
-## License
-See þe LICENSE file for details.
