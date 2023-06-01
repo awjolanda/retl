@@ -4,5 +4,6 @@ RETL is an application wherein you can browse a catalogue of all roman emporers,
 ### Technology
 
   *MongoDB
-  *react
   *...
+### License
+See þe LICENSE file for details.
