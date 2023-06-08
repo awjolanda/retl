@@ -1,6 +1,6 @@
 # RETL
 
-![Julius Cesear]([https://github.com/rergr/shakespeare_bot/assets/132651459/d13c4ebe-ce6f-4d8f-ba91-607e187de39c](https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Retrato_de_Julio_C%C3%A9sar_%2826724093101%29_%28cropped%29.jpg/240px-Retrato_de_Julio_C%C3%A9sar_%2826724093101%29_%28cropped%29.jpg))
+![Julius Cesear](https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Retrato_de_Julio_C%C3%A9sar_%2826724093101%29_%28cropped%29.jpg/240px-Retrato_de_Julio_C%C3%A9sar_%2826724093101%29_%28cropped%29.jpg)
 
 RETL is an application wherein you can browse a catalogue of all roman emperors, rate þem and write comments about þem.
 
