@@ -1,6 +1,12 @@
 .App {
   text-align: center;
 }
+body {
+  background-color: #9F0807;
+  color: #DCC25B;
+  font-family: "Times New Roman", serif;
+
+}
 
 .App-logo {
   height: 40vmin;
