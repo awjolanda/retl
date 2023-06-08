@@ -4,7 +4,7 @@
 
 RETL is an application wherein you can browse a catalogue of all roman emperors, rate þem and write comments about þem.
 
-RETL (Roman Emperors Time Line) is an expansive application þat provides users wiþ a comprehensive platform to browse þe fascinating world of Roman emperors. Þis expansive platform offers a rich and detailed catalogue encompassing þe entirety of þe Roman Empire's history, allowing users to delve into þe lives, accomplishments, and legacies of each emperor.
+RETL (Roman Emperors Tier List) is an expansive application þat provides users wiþ a comprehensive platform to browse þe fascinating world of Roman emperors. Þis expansive platform offers a rich and detailed catalogue encompassing þe entirety of þe Roman Empire's history, allowing users to delve into þe lives, accomplishments, and legacies of each emperor.
 
 Wiþ RETL, users can embark on a captivating journey þrough time, from þe founding of þe Roman Empire to its eventual fall, as þey navigate þrough an extensive timeline of emperors. Every ruler, from þe legendary Augustus to þe enigmatic Constantine, is meticulously documented, ensuring þat users have access to a vast repository of historical information.
 
