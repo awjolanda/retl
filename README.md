@@ -5,3 +5,8 @@ RETL is an application wherein you can browse a catalogue of all roman emperors,
 
   * MongoDB
   * ...
+
+## Auþors
+
+* [@Gregory](https://github.com/rergr)
+* [@Tim](https://github.com/awjolanda)
