@@ -1,0 +1,29 @@
+[
+    {
+        "index": 1,
+        "infos": {
+            "index": 1,
+            "name": "Caligula",
+            "name_full": "GAIVS IVLIVS CAESAR AVGVSTVS GERMANICVS",
+            "birth": "12-08-31",
+            "death": "41-01-24",
+            "birth_cty": "Antitum",
+            "birth_prv": "Italia",
+            "rise": "Birthright",
+            "reign_start": "37-03-18",
+            "reign_end": "41-01-24",
+            "cause": "Assassination",
+            "killer": "Senate",
+            "dynasty": "Julio-Claudian",
+            "era": "Principate",
+            "notes": "assassination may have only involved the Praetorian Guard",
+            "verif_who": "Reddit user zonination",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Caligula_Rekonstruktion_Polychromie_(cropped).JPG"
+        },
+        "user_input": {
+            "rating": 5,
+            "comment": "GAYUS",
+            "is_favorite": true
+        }
+    }
+]
