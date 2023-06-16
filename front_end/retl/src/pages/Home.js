@@ -9,7 +9,7 @@ const Home = () => {
     return (
         <div className={styles.container}>
             <h1>VENI VIDI VICI</h1>
-            <Link to="/home"><img className={styles.image} src={SPQR}/></Link>
+            <Link to="/list_all"><img className={styles.image} src={SPQR}/></Link>
             <h1>MMXXIII</h1>
         </div>
     )
