@@ -1,6 +1,6 @@
 import app from "./server.js"
 import mongodb from "mongodb"
-// import Emperor from "./dao/emperors.js"
+import ReviewsDAO from "./dao/reviewsDAO.js"
 
 const MongoClient = mongodb.MongoClient
 const uri = "mongodb+srv://Gerg:U0kZaRnOjgI1YfvA@cluster0.px65fl2.mongodb.net/?retryWrites=true&w=majority"
@@ -18,6 +18,7 @@ MongoClient.connect(
     console.error(err.stack)
     process.exit(1)
 }).then(async client =>{
+    await ReviewsDAO.injectDB(client)
     app.listen(port, () => {
         console.log(port)
     })

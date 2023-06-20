@@ -1,4 +1,4 @@
-import ReviewsDAO from "./dao/ReviewsDAO.js";
+import ReviewsDAO from "../dao/ReviewsDAO.js";
 
 export default class ReviewController {
     static async apiPostReview(req, res, next) {
@@ -46,8 +46,7 @@ export default class ReviewController {
             const updateData = req.body;
 
             const reviewResponse = await ReviewsDAO.updateReview(reviewId, updateData);
-            if (reviewResponse.modifiedCount === 0) {
-                throw new Error("Failed to update review.");
+            if (reviewResponse.modifiedCount === 0) {throw new Error("Failed to update review.");
             }
 
             res.json({ status: "success" });
@@ -68,6 +67,26 @@ export default class ReviewController {
             res.json({ status: "success" });
         } catch (e) {
             res.status(500).json({ error: e.message });
+        }
+    }
+
+    static async apiGetReviews(req, res, next) {
+        try {
+            let id = req.params.id || {};
+            let reviews = await ReviewsDAO.getReviewByEmperorID(id);
+            let rating = await ReviewsDAO.getReviewByEmperorID(id);
+            if (!reviews) {
+                res.status(404).json({ error: "not found" });
+                return;
+            }
+            if (!rating) {
+                res.status(404).json({ error: "not found" });
+                return;
+            }
+            res.json(reviews);
+        } catch (e) {
+            console.log(`api, ${e}`);
+            res.status(500).json({ error: e });
         }
     }
 }
