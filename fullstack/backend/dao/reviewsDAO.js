@@ -3,22 +3,26 @@ const ObjectId = mongodb.ObjectId
 
 let reviews
 
+
 export default class ReviewsDAO {
     static async injectDB(conn) {
+        console.log("as")
         if(reviews){
             return
         }
         try {
-            reviews = await conn.db("reviews").collection("reviews")
+            reviews = await conn.db("retl").collection("reviews")
         } catch (e) {
             console.error(`DAO${e}`)
             return {error: e}
         }
+
     }
-    static async addReview(emperorID, user, review, rating){
+    static async addReview(emperorId, user, review, rating){
+        console.log(reviews)
         try {
             const reviewDoc = {
-                emperorID: emperorID,
+                emperorId: emperorId,
                 user: user,
                 review: review,
                 rating: rating,

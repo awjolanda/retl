@@ -3,13 +3,13 @@ import ReviewsDAO from "../dao/ReviewsDAO.js";
 export default class ReviewController {
     static async apiPostReview(req, res, next) {
         try {
-            const emporerID = req.body.emporerID;
+            const emperorId = req.body.emperorId;
             const user = req.body.user;
             const review = req.body.review;
             const rating = req.body.rating;
 
-            const reviewResponse = await ReviewsDAO.addReview(
-                emporerID,
+            await ReviewsDAO.addReview(
+                emperorId,
                 user,
                 review,
                 rating
@@ -24,13 +24,8 @@ export default class ReviewController {
         try {
             let id = req.params.id || {};
             let review = await ReviewsDAO.getReview(id);
-            let rating = await ReviewsDAO.getRating(id);
             if (!review) {
-                res.status(404).json({ error: "not found" });
-                return;
-            }
-            if (!rating) {
-                res.status(404).json({ error: "not found" });
+                res.status(404).json({error: "not found"});
                 return;
             }
             res.json(review);
