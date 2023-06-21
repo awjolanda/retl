@@ -1,23 +1,21 @@
-import mongodb from "mongodb";
-const ObjectId = mongodb.ObjectId
+import mongodb from "mongodb"
+
+const { ObjectId } = mongodb;
 
 let reviews
 
-
 export default class ReviewsDAO {
     static async injectDB(conn) {
-        console.log("as")
-        if(reviews){
+        if (reviews) {
             return
         }
         try {
             reviews = await conn.db("retl").collection("reviews")
         } catch (e) {
-            console.error(`DAO${e}`)
-            return {error: e}
+            console.error(`Unable to establish collection handles in userDAO: ${e}`)
         }
-
     }
+
     static async addReview(emperorId, user, review, rating){
         console.log(reviews)
         try {
@@ -27,59 +25,58 @@ export default class ReviewsDAO {
                 review: review,
                 rating: rating,
             }
+            console.log("adding")
             return await reviews.insertOne(reviewDoc)
         } catch (e) {
-            console.error(`Error to post ${e}`)
-            return {error: e}
+            console.error(`Unable to post review: ${e}`)
+            return { error: e }
         }
     }
 
-    static async getReview(reviewID){
+    static async getReview(reviewId) {
         try {
-            return await reviews.findOne({_id: ObjectId(reviewID)})
+            return await reviews.findOne({ _id: new ObjectId(reviewId) })
         } catch (e) {
-            console.error(`Error to get review ${e}`)
-            return {error: e}
+            console.error(`Unable to get review: ${e}`)
+            return { error: e }
         }
     }
 
-    static async updateReview(reviewID, user, review, rating){
+    static async updateReview(reviewId, user, review, rating) {
+        console.log(reviewId)
         try {
             const updateResponse = await reviews.updateOne(
-                {_id: ObjectId(reviewID)},
-                {$set: {user:user, review:review, rating:rating}}
+                { _id: new ObjectId(reviewId) },
+                { $set: { user: user, review: review, rating: rating } }
             )
 
             return updateResponse
         } catch (e) {
-            console.error(`Error to update ${e}`)
-            return {error: e}
+            console.error(`Unable to update review: ${e}`)
+            return { error: e }
         }
     }
 
-    static async deleteReview(reviewID) {
-        try {
-            const deleteResponse = await reviews.deleteOne({
-                _id: ObjectId(reviewID)
-            })
+    static async deleteReview(reviewId) {
 
-            return deleteResponse
+        try {
+            return await reviews.deleteOne({
+                _id: new ObjectId(reviewId),
+            })
         } catch (e) {
-            console.error(`Error to delete ${e}`)
-            return {error: e}
+            console.error(`Unable to delete review: ${e}`)
+            return { error: e }
         }
     }
-    static async getReviewByEmperorID(emperorId){
+
+    static async getReviewsByEmperorId(emperorId) {
         try {
-            const cursor = await  reviews.find({
-                emperorId: parseInt(emperorId)
-            })
+            const cursor = await reviews.find({ emperorId: parseInt(emperorId) })
             return cursor.toArray()
         } catch (e) {
-            console.error(`Error to get reviews ${e}`)
-            return {error: e}
+            console.error(`Unable to get review: ${e}`)
+            return { error: e }
         }
     }
-
 
 }

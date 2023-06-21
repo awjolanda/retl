@@ -1,13 +1,15 @@
 import express from "express";
-import ReviewsCtrl from './review.controller.js'
+import ReviewController from './review.controller.js'
+import EmperorController from './review.controller.js'
 
 const router = express.Router();
 
-router.route("/emperors/:id").get(ReviewsCtrl.apiGetReview)
-router.route("/new").post(ReviewsCtrl.apiPostReview)
+router.route("/emperors/:id").get(ReviewController.apiGetReviews)
+router.route("/new").post(ReviewController.apiPostReview)
 router.route("/:id")
-    .get(ReviewsCtrl.apiGetReview)
-    .put(ReviewsCtrl.apiUpdateReview)
-    .delete(ReviewsCtrl.apiDeleteReview)
+    .get(ReviewController.apiGetReview)
+    .put(ReviewController.apiUpdateReview)
+    .delete(ReviewController.apiDeleteReview)
+
 
 export default router;

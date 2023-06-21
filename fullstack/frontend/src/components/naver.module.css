@@ -1,6 +1,8 @@
+
+
 .naver {
     background-color: #DCC25B;
-    position: fixed;
+    position: absolute;
     width: 100%;
     top: 30px;
     left: 0;
@@ -12,9 +14,8 @@
 }
 
 .image {
-    position: fixed;
+    position: absolute;
     width: 140px;
-    top: 5px;
     left: 0;
 }
 
