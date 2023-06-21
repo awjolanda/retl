@@ -1,32 +1,7 @@
-.emperor-list {
+.container {
     display: flex;
     flex-direction: column;
-}
-
-.emperor-container {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 20px;
-}
-
-.emperor-image-container {
-    flex: 0 0 auto;
-    margin-right: 10px;
-}
-
-.emperor-image {
-    width: 100px;
-    height: auto;
-}
-
-.emperor-details {
-    flex: 1 1 auto;
-}
-
-.emperor-details h3 {
-    margin-top: 0;
-}
-
-.emperor-details p {
-    margin: 0;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
