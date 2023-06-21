@@ -50,7 +50,7 @@ const List_all = () => {
                             <Link to={`/create/${item.index}`}>
                                 <button className={styles.button}>Create</button>
                             </Link>
-                            <Link to={`/view/${item.index}`}>
+                            <Link to={`/emperor/${item.index}`}>
                                 <button className={styles.button}>View</button>
                             </Link>
                         </div>

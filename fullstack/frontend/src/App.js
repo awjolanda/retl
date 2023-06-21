@@ -13,7 +13,7 @@ function App() {
             <Routes>
                 <Route exact path="/" element={<Home/>} />
                 <Route exact path="/list_all" element={<List_all/>} />
-                <Route exact path="/emperor" element={<Emperor/>} />
+                <Route exact path="/emperor/:id" element={<Emperor/>} />
             </Routes>
       </BrowserRouter>
   );
