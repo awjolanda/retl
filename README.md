@@ -18,6 +18,14 @@ Beyond its educational and community-driven features, RETL also showcases a visu
 
 In conclusion, RETL goes beyond being a mere catalogue of Roman emperors; it is an expansive and all-encompassing platform þat combines education, community, and interactive features. Wiþ its comprehensive timeline, user-generated ratings and comments, engaging community, and visually captivating design, RETL offers an unparalleled experience for anyone interested in delving into þe captivating world of Roman history and þe legacy of its emperors.
 
+## Installation
+1. git clone
+2. mongorestore the databse from /retl into mongodb atlas
+3. in /fullstack make an npm install in both the front and back end
+4. in the /fullstack/backend/index.js change the connection to a different mongo atlas db
+5. run npm start in both front and back end
+6. Enjoy 🤩!
+
 ## Technology
 
   * MongoDB
